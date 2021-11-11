@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenericTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>zaslontelecom.esk.backend.api</Namespace>
+  <GenerateSqlStoredProcedureView>false</GenerateSqlStoredProcedureView>
+  <GenerateSqlStoredProcedureManage>false</GenerateSqlStoredProcedureManage>
+  <GenerateSqlTable>true</GenerateSqlTable>
+  <GenerateNgView>false</GenerateNgView>
+  <GenerateNgForm>false</GenerateNgForm>
+  <BusinessLayerType>Java</BusinessLayerType>
+  <DbLayerType>ORACLE</DbLayerType>
+  <ParentTable>
+	<Schema>ESK_DATA</Schema>
+    <Name>Shema</Name>
+    <Column>
+      <TableName>Shema</TableName>
+      <Name>id</Name>
+      <Type>int</Type>
+      <Identity>true</Identity>
+    </Column>
+    <Column>
+      <TableName>Shema</TableName>
+      <Name>naziv</Name>
+      <Type>String</Type>
+    </Column>
+  </ParentTable>
+  <ModelName>Shema</ModelName>
+  <CRUD>LIST</CRUD>
+  <CRUD>GET</CRUD>
+  <CRUD>POST</CRUD>
+  <CRUD>PUT</CRUD>
+  <CRUD>DELETE</CRUD>
+  <Auth>
+    <AllowAnonymus>false</AllowAnonymus>
+    <Authorize>true</Authorize>
+  </Auth>
+  <Key>
+    <TableName>Shema</TableName>
+    <Name>id</Name>
+  </Key>
+</GenericTemplate>

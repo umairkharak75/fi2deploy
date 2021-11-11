@@ -1,0 +1,36 @@
+# Oracle settings
+spring.datasource.url=jdbc:oracle:thin:@sql1.zt.local:1521:orcl
+spring.datasource.username=ESK_DATA
+spring.datasource.password=gtz7p32j
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+
+# create and drop tables and sequences, loads import.sql
+
+# spring.jpa.hibernate.ddl-auto=validate
+
+# SPEED UP builds NOT for PRODUCTION
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
+
+# logging
+
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+hibernate.cache.use_query_cache="false"
+spring.jpa.properties.hibernate.proc.param_null_passing=true
+hibernate.synonyms=true
+hibernate.connection.includeSynonyms=true
+jwt.secret=789349043jtgfhrngf834hjt89vnoi4589hv3f9854z98h9v84h5t9tjwohfji389440218fjei
+esk.template.path=c:/Temp/ESK/templates/
+esk.download.path=c:/Temp/ESK/downloads/
+esk.working.path=c:/Temp/ESK/working/
+error.whitelabel.enabled=false
+imis.enable=false
+imis.host=iarc://a.imis.si
+imis.username=a
+imis.password=a
+imis.stage=a
+client.address=https://esk.dev.ztit.si
+file.size=100000
+chron.certificates.finish=0 0 4 * * ?
+antisamy.filePath=c:/Temp/ESK/templates/antisamy.xml

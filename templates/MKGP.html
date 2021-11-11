@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+		<style>
+		@page{
+
+			  @bottom-right {
+				content: "Stran " counter(page) " od " counter(pages);
+			  }
+
+			@top-right {
+				content: element(header); 
+				vertical-align: bottom;
+				padding-bottom: 10px;
+				/* border: solid green; */
+			}
+
+			size: A4 portrait;
+			margin-top:4.3cm; 
+			margin-bottom:3cm; 
+		}
+
+		div.header {
+			display: block;                     
+			position: running(header);
+		}
+
+		div.footer {
+			position: running(footer);
+			text-align: right;
+		}
+
+		div.content {
+			display: block;
+			text-align: justify;
+		}
+
+		#pagenumber:before {
+			content: counter(page);
+		}
+
+		#pagecount:before {
+			content: counter(pages);
+		}
+
+		img.header {
+		  width: 10cm;
+		  height: 2cm;
+		  object-fit: cover;
+		}
+
+		img.footer {
+			text-align:right;
+			width: 18.5cm;
+			height: 3cm;
+		}
+
+		.document {
+			font-family: 'Roboto';
+			color: #737878; 
+			font-size: 15px;
+		}
+
+		.center{
+			text-align:center;
+		}
+		
+		.justify{
+			text-align: justify;
+		}
+
+		.green{
+			color:#3275a8;
+		}
+
+		.big{
+			font-size: 40px;
+		}
+
+		.right{
+			text-align:right;
+		}
+
+		.top10{
+			margin-top: 10px;
+		}
+
+		.left20{
+			margin-left: 20px;
+		}
+
+		.full{
+			width: 100%; height: auto;
+		}
+
+		</style>
+	</head>
+	<body class="document">
+		<!-- ................... HEADER ...................-->
+		<div class="header">
+			<img class="header" alt="[LOGO]" src="data:image/png;base64, [BASE_64_LOGO]"/>
+			<hr></hr>
+		</div>
+		<!-- ................... CONTENT ...................-->
+		<div class="content">
+			<div class="big green center">POROČILO [LETO]</div>
+			<p class="green">1. Število nosilcev  po vrsti sheme kakovosti </p>
+			<table style="width:100%">
+			  <tr>
+				<th>Shema kakovosti</th>
+				<th>Število nosilcev</th> 
+			  </tr>
+			  [RPT1]
+			</table>
+			<p class="green">2. Število nosilcev  po podatku zaščiten proizvod ali proizvod  iz sheme kakovosti IK </p>
+			<table style="width:100%">
+			  <tr>
+				<th>Zaščiten proizvod ali proizvod iz sheme kakovosti IK</th>
+				<th>Število nosilcev</th> 
+			  </tr>
+			  [RPT2]
+			</table>
+			<p class="green">3. Število KMG_MID po vrsti sheme kakovosti (člani nosilcev + individualni KMG_MID) </p>
+			<table style="width:100%">
+			  <tr>
+				<th>Shema kakovosti</th>
+				<th>Število KMG-MID</th> 
+			  </tr>
+			  [RPT3]
+			</table>
+			<p class="green">4. Število KMG_MID po podatku zaščiten proizvod ali proizvod  iz sheme kakovosti IK (člani nosilcev + individualni KMG_MID)</p>
+			<table style="width:100%">
+			  <tr>
+				<th>Zaščiten proizvod ali proizvod iz sheme kakovosti IK</th>
+				<th>Število KMG-MID</th> 
+			  </tr>
+			  [RPT4]
+			</table>
+			<p class="green">5. Vsota certificiranih  površin po posamezni kmetijski rastlini </p>
+			<table style="width:100%">
+			  <tr>
+				<th>Zaščiten proizvod ali proizvod iz sheme kakovosti IK</th>
+				<th>Površina</th> 
+				<th>Enota</th> 
+			  </tr>
+			  [RPT5]
+			</table>
+			<p class="green">6. Skupne letne količine kmetijskih pridelkov oz. živil po posameznem proizvodu iz shem kakovosti </p>
+			<table style="width:100%">
+			  <tr>
+				<th>Proizvod iz sheme kakovosti - zbiranje podatkov</th>
+				<th>Količina</th> 
+				<th>Enota</th>
+			  </tr>
+			  [RPT6]
+			</table>
+		</div>
+	</body>
+</html>

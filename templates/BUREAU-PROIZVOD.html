@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+		<style>
+		@page{
+
+			@bottom-left {                 
+				content: element(footer);  
+				vertical-align: top;
+				padding-top: 10px;
+				
+			}
+
+			@top-right {
+				content: element(header); 
+				vertical-align: bottom;
+				padding-bottom: 10px;
+				
+			}
+
+			size: A4 portrait;
+			margin-top:5.5cm; 
+			margin-bottom:[MARGIN-BOTTOM-PRILOGA]cm; 
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-image: url('data:image/png;base64,[BACKGROUND]')
+		}
+
+		div.header {
+			display: block;                     
+			position: running(header); width: 100%;			
+			padding-left: 3cm;
+		}
+
+		div.footer {
+			display: block;
+			position: running(footer); 
+			width: auto;
+			padding-left: 4cm;		
+		}
+
+		div.content {
+			width: auto;			
+			display: block;
+			text-align: justify;
+			padding-left: 2cm;
+		}
+
+		#pagenumber:before {
+			content: counter(page);
+		}
+
+		#pagecount:before {
+			content: counter(pages);
+		}
+
+		.document {
+			font-family: 'Roboto';
+			color: #737878; 
+			font-size: 16px;
+		}
+
+		.center{
+			text-align:center;
+		}
+
+		.justify{
+			text-align: justify;
+		}
+
+		.green{
+			color:#a83939;
+		}
+
+		.big{
+			font-size: 28px;
+		}
+
+		.right{
+			text-align:right;
+		}
+
+		.right-float{
+			float:right;
+		}
+		.top10{
+			margin-top: 10px;
+		}
+
+
+		.full{
+			width: 100%; height: auto;
+		}
+
+		</style>
+	</head>
+	<body class="document">
+		<!-- ................... HEADER ...................-->
+		<div class="header">
+		</div>
+		<!-- ................... FOOTER ...................-->
+		<div class="footer">
+			<p>
+				<div>Veljavnost priloge: <strong class="green">[DAT_VELJ_PROIZVOD]</strong>
+				</div>
+				<div>Datum in kraj izdaje: <strong class="green">Hoče</strong>, <strong class="green">[DAT_IZDAJE_PROIZVOD]</strong>
+				</div>
+			</p>
+			<p>
+				[PRILOGA_PROIZVOD_PREJ]
+			</p>
+			<p>
+				<div style="white-space: nowrap;" class="right-float">
+					<div class="center" style="white-space: nowrap;">[PODPISNIK]</div>
+					<div class="center" style="white-space: nowrap;">[PODPISNIK_VLOGA]</div>
+				</div>
+			</p>
+		</div>
+		<!-- ................... CONTENT ...................-->
+		<div class="content">
+			<div class="center big">
+				PRILOGA SEZNAM CERTIFICIRANIH PROIZVODOV ŠT. <span class="green">[STEVILKA_PROIZVOD]</span> 
+				K CERTIFIKATU ŠT.<span class="green"> [STEVILKA]</span>
+			</div>
+			<p>
+				<strong>Seznam certificiranih proizvodov:</strong>
+			</p>
+			<p>
+				<i>[PROIZVOD_PODROBNO]</i>
+			</p>
+		</div>
+    </body>
+</html>

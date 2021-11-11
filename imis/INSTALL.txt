@@ -1,0 +1,50 @@
+Installing IMiS/Storage Connector Java Edition
+========================================
+
+Table of Contents
+------------------
+1. Package Contents
+2. Requirements
+3. Installation
+4. Samples
+
+PACKAGE CONTENTS:
+-----------------
+IMiS/Storage Connector Java Edition provides source code and
+libraries for interacting with IMiS/Storage Connector supported storage services
+such as IMiS/ARChive HSM Storage Server. This package includes
+1. IMiS/Storage Connector JavaDoc API documentation "doc/javadoc".
+2. IMiS/Storage Connector PDF API documentation "doc/pdf".
+3. IMiS/Storage Connector CHM API documentation "doc/chm".
+4. IMiS/Storage Connector libraries under "lib".
+5. IMiS/Storage Connector samples under "samples".
+
+REQUIREMENTS:
+-------------
+IMiS/Storage Connector Java Edition depends on following external
+utilities/libraries:
+1. Java Runtime Environment versions 1.5 or greater. Latest version of JRE
+available for download from http://java.sun.com.
+2. In case of advanced authentication (encrypted) to storage systems Java
+Cryptography Extension (JCE) with Unlimited Strength Jurisdiction Policy Files.
+Distribution of these files is provided by the JRE Vendor and is specific to the JRE
+implementation (see http://d2.imis.eu/imaging4notes.com/imiskb.nsf/e37656a7f51b585a8525667500536b5f/0b902ec9ebec5e42c12579ca00393baa?OpenDocument)
+
+INSTALLATION:
+-------------
+1. Suggested installation method is to install all files under directory "lib" to your
+JRE ext directory ("jvm/lib/ext") since libraries can be shared among applications
+which all use IMiS/Storage Connector product.
+2. Alternativly you can install all files under directory "lib" to one of your
+directories from CLASSPATH so JRE ill be able to use them.
+
+SAMPLES:
+-------------
+The package includes trivial samples for developer to get them started. The projects are
+developed in Eclipse IDE but can be migrated to any other Java Development environment.
+You are free to modify the code and play with it. Imaging Systems is not liable
+for any damages which might be the result of using the sample files. See License Agreement
+for more information.
+
+
+(c) Imaging Systems Inc. 2019

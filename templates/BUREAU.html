@@ -1,0 +1,147 @@
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+		<style>
+		@page{
+
+			@bottom-left {                 
+				content: element(footer);  
+				vertical-align: top;
+				padding-top: 10px;
+				
+			}
+
+			@top-right {
+				content: element(header); 
+				vertical-align: bottom;
+				padding-bottom: 10px;
+				
+			}
+
+			size: A4 portrait;
+			margin-top:5.5cm; 
+			margin-bottom:[MARGIN-BOTTOM-CERTIFIKAT]cm; 
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-image: url('data:image/png;base64,[BACKGROUND]')
+		}
+
+		div.header {
+			display: block;                     
+			position: running(header); 
+			width: 100%;
+		}
+		
+		div.footer {
+			display: block;
+			position: running(footer); 
+			width: auto;
+			padding-left: 4cm;		
+		}
+
+		div.content {
+			width: auto;		
+			display: block;
+			text-align: justify;
+			padding-left: 2cm;
+		}
+
+		#pagenumber:before {
+			content: counter(page);
+		}
+
+		#pagecount:before {
+			content: counter(pages);
+		}
+
+		.document {
+			font-family: 'Roboto';
+			color: #737878; 
+			font-size: 16px;
+		}
+
+		.center{
+			text-align:center;
+		}
+		
+		.justify{
+			text-align: justify;
+		}
+
+		.green{
+			color:#a83939;
+		}
+
+		.big{
+			font-size: 70px;
+		}
+		
+		.mid{
+			font-size: [IMETNIK_FONT_SIZE]px;
+		}
+
+		.right{
+			text-align:right;
+		}
+		
+		.right-float{
+			float:right;
+		}
+
+		.top10{
+			margin-top: 10px;
+		}
+
+
+		.full{
+			width: 100%; height: auto;
+		}
+		
+		p {
+		  margin-top: 0.75em;
+		  margin-bottom: 0.75em;
+		}
+
+		</style>
+	</head>
+	<body class="document">
+		<!-- ................... HEADER ...................-->
+		<div class="header">
+		</div>
+		<!-- ................... FOOTER ...................-->
+		<div class="footer">
+			<p>
+				Številka certifikata: <strong class="green">[STEVILKA]</strong>
+				<span class="right-float">Veljavnost certifikata: <strong class="green">[DAT_VELJ]</strong>
+				</span>
+			</p>
+			[CERTIFIKAT_PREJ]
+			<p>Datum in kraj izdaje: <strong class="green">Ljubljana</strong>, <strong class="green">[DAT_IZDAJE]</strong> </p>
+			<p>
+				<div style="white-space: nowrap;" class="right-float">
+					<div class="center" style="white-space: nowrap;">[PODPISNIK]</div>
+					<div class="center" style="white-space: nowrap;">[PODPISNIK_VLOGA]</div>
+				</div>
+			</p>
+			[IMA_PRILOGE]
+		</div>
+		<!-- ................... CONTENT ...................-->
+		<div class="content">
+			<div class="center big green">CERTIFIKAT</div>
+			<div class="center">
+				<p>
+					<strong>Certifikacijski organ BUREAU VERITAS d.o.o., Ljubljana potrjuje, da:</strong>
+				</p>
+			</div>
+			<p class="green center mid">
+				<strong>[IMETNIK]</strong>
+			</p>
+			<p class="green center">
+				<strong>[IMETNIK_NASLOV]</strong>
+			</p>
+			[PRAVNA_PODLAGA]
+			[ZASCITEN_PROIZVOD]
+			[DEJAVNOST]
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+# Oracle settings
+# spring.datasource.url=jdbc:oracle:thin:@192.168.80.118:1521:TEST11R2
+# spring.datasource.username=ESK_DATA
+# spring.datasource.password=Data2019
+
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@sql1.zt.local:1521:orcl
+spring.datasource.username=APP_ESK_N
+spring.datasource.password=gtz7p32j
+# to show sql (ta test je lahko omogo?en, produkcija gre ven)
+spring.jpa.properties.hibernate.show_sql=true 
+# formatting
+spring.jpa.properties.hibernate.format_sql=true
+# printing parameter values in order, za produkcijo gre ven
+logging.level.org.hibernate.type.descriptor.sql=trace
+
+# logiranje v produkciji nastavitev vse na ERROR
+logging.level.root=ERROR
+logging.level.org.springframework.web=ERROR
+logging.level.org.hibernate=ERROR
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+logging.path=C:/Temp/ESK/logging/
+
+# HIBERNATE (vse ostane tako kot spodaj)
+hibernate.cache.use_query_cache=false
+spring.jpa.properties.hibernate.proc.param_null_passing=true
+hibernate.synonyms=true
+hibernate.connection.includeSynonyms=true
+
+#JWT Java Web token -  privatni klju? za avtorizacijski hash
+jwt.secret=789349043jtgfhrngf834hjt89vnoi4589hv3f9854z98h9v84h5t9tjwohfji389440218fjei
+
+# Folderji ki jih rabi aplikacija za delo
+esk.template.path=C:/Temp/ESK/templates/
+esk.download.path=C:/Temp/ESK/downloads/
+esk.working.path=C:/Temp/ESK/working/
+
+error.whitelabel.enabled=false
+
+# NASTAVITVE ZA IMIS DOKUMENTNI SISTEM (Spodnje vrednosti LAHKO uporabite samo v testnem okolju)
+imis.enable=false
+imis.host=iarc://a.imis.si
+imis.username=a
+imis.password=a
+imis.stage=zaslon.si
+
+# CORS naslov za klienta (?e bosta klient in server tekla skupaj potem je to isti naslov npr. https://esk.mkgp.si)
+client.address=https://esk.dev.ztit.si
+
+# File upload size v bytih
+file.size=100000
+chron.certificates.finish=0 0 4 * * ?
+antisamy.filePath=C:/Temp/ESK/templates/antisamy.xml

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenericTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>zaslontelecom.esk.backend.api</Namespace>
+  <GenerateSqlStoredProcedureView>false</GenerateSqlStoredProcedureView>
+  <GenerateSqlStoredProcedureManage>false</GenerateSqlStoredProcedureManage>
+  <GenerateSqlTable>true</GenerateSqlTable>
+  <GenerateNgView>false</GenerateNgView>
+  <GenerateNgForm>false</GenerateNgForm>
+  <BusinessLayerType>Java</BusinessLayerType>
+  <DbLayerType>ORACLE</DbLayerType>
+  <ParentTable>
+	<Schema>ESK_DATA</Schema>
+    <Name>Pravica</Name>
+	<Column>
+      <TableName>Pravica</TableName>
+      <Name>id</Name>
+      <Type>int</Type>
+	  <Identity>true</Identity>
+    </Column>
+    <Column>
+      <TableName>Pravica</TableName>
+      <Name>naziv</Name>
+      <Type>String</Type>
+    </Column>
+    <Column>
+      <TableName>Pravica</TableName>
+      <Name>tip</Name>
+      <Type>String</Type>
+    </Column>
+  </ParentTable>
+  <ModelName>Pravica</ModelName>
+  <CRUD>LIST</CRUD>
+  <CRUD>GET</CRUD>
+  <Auth>
+    <AllowAnonymus>false</AllowAnonymus>
+    <Authorize>true</Authorize>
+  </Auth>
+  <Key>
+    <TableName>Pravica</TableName>
+    <Name>id</Name>
+  </Key>
+</GenericTemplate>

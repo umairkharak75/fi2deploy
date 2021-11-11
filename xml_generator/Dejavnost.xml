@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GenericTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Namespace>zaslontelecom.esk.backend.api</Namespace>
+  <GenerateSqlStoredProcedureView>false</GenerateSqlStoredProcedureView>
+  <GenerateSqlStoredProcedureManage>false</GenerateSqlStoredProcedureManage>
+  <GenerateSqlTable>true</GenerateSqlTable>
+  <GenerateNgView>false</GenerateNgView>
+  <GenerateNgForm>false</GenerateNgForm>
+  <BusinessLayerType>Java</BusinessLayerType>
+  <DbLayerType>ORACLE</DbLayerType>
+  <ParentTable>
+	<Schema>ESK_DATA</Schema>
+    <Name>Dejavnost</Name>
+    <Column>
+      <TableName>Dejavnost</TableName>
+      <Name>id</Name>
+      <Type>int</Type>
+      <Identity>true</Identity>
+    </Column>
+    <Column>
+      <TableName>Dejavnost</TableName>
+      <Name>naziv</Name>
+      <Type>String</Type>
+    </Column>
+  </ParentTable>
+  <ModelName>Dejavnost</ModelName>
+  <CRUD>LIST</CRUD>
+  <CRUD>GET</CRUD>
+  <CRUD>POST</CRUD>
+  <CRUD>PUT</CRUD>
+  <CRUD>DELETE</CRUD>
+  <Auth>
+    <AllowAnonymus>false</AllowAnonymus>
+    <Authorize>true</Authorize>
+  </Auth>
+  <Key>
+    <TableName>Dejavnost</TableName>
+    <Name>id</Name>
+  </Key>
+</GenericTemplate>

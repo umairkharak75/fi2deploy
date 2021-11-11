@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.4"/>
+	<classpathentry kind="lib" path="../../lib/imisbase-3.1.1303.jar"/>
+	<classpathentry kind="lib" path="../../lib/iacxapi-3.1.1204.jar"/>
+	<classpathentry kind="lib" path="../../lib/iarcli-3.1.1209.jar"/>
+	<classpathentry kind="lib" path="../../lib/storageconnector-3.1.1304.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

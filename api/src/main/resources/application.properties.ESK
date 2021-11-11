@@ -1,0 +1,51 @@
+# Oracle settings
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@SERVER:1521:orcl
+spring.datasource.username=ESK_DATA
+spring.datasource.password=password
+
+# to show sql (ta test je lahko omogo?en, produkcija gre ven)
+spring.jpa.properties.hibernate.show_sql=true 
+# formatting
+spring.jpa.properties.hibernate.format_sql=true
+# printing parameter values in order, za produkcijo gre ven
+logging.level.org.hibernate.type.descriptor.sql=trace
+
+# logiranje v produkciji nastavitev vse na ERROR
+logging.level.root=ERROR
+logging.level.org.springframework.web=ERROR
+logging.level.org.hibernate=ERROR
+logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+logging.pattern.file=%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+logging.path=c:/Razvoj/zaslon-telecom/zt.esk/esk.backend/logging/
+
+# HIBERNATE (vse ostane tako kot spodaj)
+hibernate.cache.use_query_cache=false
+spring.jpa.properties.hibernate.proc.param_null_passing=true
+hibernate.synonyms=true
+hibernate.connection.includeSynonyms=true
+
+#JWT Java Web token -  privatni klju? za avtorizacijski hash
+jwt.secret=789349043jtgfhrngf834hjt89vnoi4589hv3f9854z98h9v84h5t9tjwohfji389440218fjei
+
+# Folderji ki jih rabi aplikacija za delo
+esk.template.path=c:/Razvoj/zaslon-telecom/zt.esk/esk.backend/templates/
+esk.download.path=c:/Razvoj/zaslon-telecom/zt.esk/esk.backend/downloads/
+esk.working.path=c:/Razvoj/zaslon-telecom/zt.esk/esk.backend/working/
+
+error.whitelabel.enabled=false
+
+# NASTAVITVE ZA IMIS DOKUMENTNI SISTEM (Spodnje vrednosti LAHKO uporabite samo v testnem okolju)
+imis.enable=false
+imis.host=iarc://a.imis.si
+imis.username=a
+imis.password=a
+imis.stage=a
+
+# CORS naslov za klienta (?e bosta klient in server tekla skupaj potem je to isti naslov npr. https://esk.mkgp.si)
+client.address=http://localhost:4200
+
+# File upload size v bytih
+file.size=100000
+chron.certificates.finish=0 0 4 * * ?
+antisamy.filePath=c:/Razvoj/zaslon-telecom/zt.esk/esk.backend/templates/antisamy.xml

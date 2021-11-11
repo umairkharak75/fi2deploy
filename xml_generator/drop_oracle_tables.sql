@@ -1,0 +1,19 @@
+drop table Priloga_clan cascade constraints;
+drop table CERTIFIKAT_proizvod cascade constraints;
+drop table CERTIFIKAT_priloga_proizvod cascade constraints;
+drop table CERTIFIKAT_priloga_clan cascade constraints;
+drop table Priloga cascade constraints;
+drop table ProizvodKolicine cascade constraints;
+drop table Certifikat cascade constraints;
+drop table ZASCITNIZNAK_proizvod cascade constraints;
+drop table ZascitniZnak cascade constraints;
+drop table Proizvod cascade constraints;
+drop table ZakonskaPodlaga cascade constraints;
+drop table Dejavnost cascade constraints;
+drop table Uporabnik_pravice cascade constraints;
+drop table Uporabnik cascade constraints;
+drop table Pravica cascade constraints;
+drop table Subjekt cascade constraints;
+drop table ZascitenProizvod cascade constraints;
+drop table Shema cascade constraints;
+

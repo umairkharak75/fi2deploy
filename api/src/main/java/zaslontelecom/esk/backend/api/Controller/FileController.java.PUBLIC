@@ -1,0 +1,66 @@
+package zaslontelecom.esk.backend.api.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.web.bind.annotation.*;
+import zaslontelecom.esk.backend.api.Model.Certifikat;
+import zaslontelecom.esk.backend.api.Service.*;
+import zaslontelecom.esk.backend.api.Utils.HandledException;
+import zaslontelecom.esk.backend.api.Utils.Imis.ImisDms;
+import zaslontelecom.esk.backend.api.Utils.PdfTools;
+import zaslontelecom.esk.backend.api.Utils.Settings;
+
+import javax.servlet.http.HttpServletResponse;
+import java.util.Optional;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping(path = "/files")
+public class FileController extends BaseController {
+
+    @Autowired
+    CertifikatService certifikatService;
+
+    @Autowired
+    ImisDms imisService;
+
+    @Autowired
+    FileService fileService;
+
+    @Autowired
+    Settings settings;
+
+    @RequestMapping(value = "/pdf/{filename}", method = RequestMethod.GET, headers = "Accept=application/pdf", produces = "application/pdf; charset=utf-8")
+    public Resource pdf(@PathVariable String filename, HttpServletResponse response) throws HandledException {
+        try {
+
+            Optional<Certifikat> cert = certifikatService.get(Long.valueOf(filename));
+
+            if (!cert.isPresent()){
+                throw new HandledException("Certifikat ne obstaja!");
+            }
+
+            filename = certifikatService.getPdfFilename(cert.get());
+
+
+            String idImis = this.certifikatService.getImisId(cert.get().getId());
+            if (!idImis.equals(String.valueOf(cert.get().getId()))) {
+                // CERT from IMIS storage
+                this.imisService.documentRetrieve(idImis, filename);
+            }else {
+                // CERT from Oracle database
+                this.certifikatService.generatePDF(cert.get().getId(), filename);
+            }
+
+            // adding watermark
+            if (!isAuthenticated()) {
+                String logoPath = settings.getPdfTemplatePath() + "images/" + "copy.png";
+                PdfTools.generateWatermark(filename, logoPath);
+            }
+
+            return fileService.getFileSystem(filename, response);
+        }catch(Exception ex){
+            return null;
+        }
+    }
+}

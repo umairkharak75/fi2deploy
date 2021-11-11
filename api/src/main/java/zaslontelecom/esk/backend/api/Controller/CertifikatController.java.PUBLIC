@@ -1,0 +1,7 @@
+package zaslontelecom.esk.backend.api.Controller;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(path = "/certifikat")
+public class CertifikatController extends CertifikatBaseController {
+}
